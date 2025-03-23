@@ -1,0 +1,115 @@
+/* Definindo a cor de fundo e o layout básico */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+
+.logoLogin {
+  color: #009e84;
+  font-weight: bold;
+  font-size: 30px; 
+  text-shadow: 0 5px 4px rgba(27, 27, 26, 0.2);
+  margin-bottom: 20px; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  width: 100%;
+}
+
+.logoLogin h1 {
+    color: #009e84;
+    
+    font-weight: bold;  /* Corrigido de 'font' para 'font-weight' */
+    font-size: 45px;
+    border-bottom: solid 2px #9ec2bc;
+    text-shadow: 0 5px 4px rgba(27, 27, 26, 0.2); 
+}
+
+.formLogin {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.formLogin h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+
+.formLogin input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+
+.formLogin input:focus {
+  border-color: #009e84;
+}
+
+/* Estilos do botão */
+.formLogin button {
+  width: 100%;
+  padding: 10px;
+  background-color: #009e84;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom:20px ;
+
+}
+
+
+.formLogin button:hover {
+  background-color: #007f6a; 
+}
+
+.pReviewLogin {
+  color: #009e84;
+  margin-bottom: 10px;
+}
+
+.formLogin p.p-error {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #c72b2b;
+  font-weight: bold;
+}
+
+.formLogin p.success {
+  color: #009e84;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 30px;
+}
+a {
+  cursor: pointer;
+  color: #a1a8a7;
+  margin-left: 10px;
+}
+@media (max-width: 480px) {
+.logoLogin{
+font-size: 20px;
+}
+
+}

@@ -1,0 +1,98 @@
+/* Definindo a cor de fundo e o layout básico */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Estilos do container do formulário */
+.form {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+/* Estilos do título */
+.form h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Estilos dos inputs */
+.form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Mudança de cor do input ao focar */
+.form input:focus {
+  border-color: #009e84;
+}
+
+/* Estilos do botão */
+.form button {
+  width: 100%;
+  margin-left: 10px;
+  padding: 10px;
+  background-color: #009e84;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom:20px ;
+}
+
+/* Efeito de hover no botão */
+.form button:hover {
+  background-color: #009e84;
+}
+
+/* Estilos da mensagem de erro ou sucesso */
+.pReview{
+    color: #009e84;
+}
+.form p.p-error {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ff0000;
+  font-weight: bold;
+}
+
+/* Estilos para a mensagem de sucesso (opcional) */
+.form p.success {
+  color: #009e84;
+}
+.logo {
+    color: #009e84;
+    text-align: start;
+    font-weight: bold;  /* Corrigido de 'font' para 'font-weight' */
+    font-size: 25px;
+    border-bottom: solid 2px #9ec2bc;
+    text-shadow: 0 5px 4px rgba(27, 27, 26, 0.2); /* Sombra do texto */
+}
+
+.title{
+    font-size: 30px;
+}
+a {
+    font-size: 15px;
+  cursor: pointer;
+  color: #009e84;
+  margin-left: 10px;
+
+}
