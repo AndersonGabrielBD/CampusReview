@@ -1,0 +1,48 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          String    @id @default(uuid())
+  nome        String
+  email       String    @unique
+  senha       String
+  avaliacoes  Review[]  // Relacionamento com avaliações
+  dataCriacao DateTime  @default(now())
+  sessions    Session[] // Relacionamento com a tabela Session
+}
+
+model College {
+  id          String    @id @default(uuid())
+  nome        String
+  localizacao String
+  descricao   String?
+  avaliacoes  Review[]  // Relacionamento com avaliações
+  dataCriacao DateTime  @default(now())
+}
+
+model Review {
+  id          String   @id @default(uuid()) @db.Uuid
+  usuarioId   String
+  faculdadeId String
+  nota        Int
+  comentario  String?
+
+  faculdade   College @relation(fields: [faculdadeId], references: [id])
+  usuario     User    @relation(fields: [usuarioId], references: [id])
+}
+
+model Session {
+  id        Int      @id @default(autoincrement())
+  userId    String
+  token     String
+  expiresAt DateTime
+  user      User     @relation(fields: [userId], references: [id])
+
+  @@unique([userId]) // Garantir que cada usuário tenha apenas um token de sessão ativo por vez
+}
